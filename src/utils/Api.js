@@ -11,8 +11,8 @@ class Api {
     }
   }
 
-  getBreweriesList() {
-    return fetch(this._address, {
+  getBreweriesList(page) {
+    return fetch(`${this._address}?page=${page}`, {
       headers: {
         'Content-Type': 'application/json',
       },

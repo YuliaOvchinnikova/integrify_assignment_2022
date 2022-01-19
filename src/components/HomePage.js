@@ -2,15 +2,17 @@ import React, { useState, useEffect } from 'react';
 import api from '../utils/Api';
 import Card from './Card';
 import Search from './Search';
+import Paginator from './Paginator';
 
 function HomePage() {
   const [breweries, setBreweries] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     if (searchQuery === '') {
       api
-        .getBreweriesList()
+        .getBreweriesList(currentPage)
         .then((breweries) => {
           setBreweries(breweries);
         })
@@ -27,7 +29,7 @@ function HomePage() {
           console.log(err);
         });
     }
-  }, [searchQuery]);
+  }, [searchQuery, currentPage]);
 
   return (
     <>
@@ -39,6 +41,9 @@ function HomePage() {
             <Card brewery={brewery} key={brewery.id} />
           ))}
       </section>
+      {searchQuery === '' && (
+        <Paginator currentPage={currentPage} onPageChange={setCurrentPage} />
+      )}
     </>
   );
 }
