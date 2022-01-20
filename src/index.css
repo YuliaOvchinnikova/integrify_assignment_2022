@@ -1,154 +1,30 @@
 @import url('./vendor/normalize.css');
 @import url('./vendor/font.css');
 
-.body {
-  background-color: #d7e0e7;
-  /* height: 100%; */
-}
+@import url('./blocks/body/body.css');
+@import url('./blocks/page/page.css');
+@import url('./blocks/title/title.css');
+@import url('./blocks/cards/cards.css');
+@import url('./blocks/card/card.css');
+@import url('./blocks/card/__container/card__container.css');
+@import url('./blocks/card/__name/card__name.css');
+@import url('./blocks/card/__info/card__info.css');
 
-.page {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
-  min-height: 100vh;
-  width: 100%;
-  min-width: 320px;
-  max-width: 1280px;
-  margin: 0 auto;
-  font-family: 'Inter', 'Arial', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+@import url('./blocks/brewery/brewery.css');
+@import url('./blocks/brewery/__title/brewery__title.css');
+@import url('./blocks/brewery/__paragraph/brewery__paragraph.css');
 
-.title {
-  margin: 30px auto;
-  text-align: center;
-}
+@import url('./blocks/search/search.css');
+@import url('./blocks/search/__form/search__form.css');
+@import url('./blocks/search/__input/search__input.css');
 
-.cards {
-  max-width: calc(100% - 200px*2);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: max-content;
-  gap: 30px 40px;
-  /* justify-items: center; */
-}
+@import url('./blocks/paginator/paginator.css');
+@import url('./blocks/paginator/__number/paginator__number.css');
 
-.card {
-  background-color: #fff;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  max-width: 282px;
-  box-shadow: 3px 2px 2px rgba(215, 200, 190, .8);
-}
+@import url('./blocks/button/button.css');
+@import url('./blocks/button/_inactive/button_inactive.css');
+@import url('./blocks/button/_card/button_card.css');
 
-.card__container {
-  margin: 10px;
-}
-
-.card__name {
-  max-width: 250px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  /* color: #000; */
-  margin: 0;
-  padding: 0;
-  /* text-align: center; */
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.2;
-}
-
-.card__info {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.2;
-}
-
-.button {
-  min-height: 30px;
-  box-sizing: border-box;
-  background-color: #b5bd7d;
-  color: #fff;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 1.2px;
-  border: none;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.card__button {
-  margin: 0;
-  border-radius: 0 0 10px 10px;
-}
-
-.card__button:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-.extended-card {
-  /* margin: auto; */
-  border: 1px solid #b5bd7d;
-  max-width: 400px;
-  background-color: #fff;
-  padding: 20px;
-}
-
-.extended-card__title {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.2;
-}
-
-.extended-card__paragraph {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.2;
-}
-
-.extended-card__button {
-  display: block;
-  width: 200px;
-  border-radius: 10px;
-  margin: 10px auto;
-}
-
-.filter {
-  margin: 30px 0 50px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  width: 100%;
-}
-
-.filter__form {
-  display: inline-block;
-  width: calc(100% - 200px*2);
-  margin: 0 auto;
-}
-
-.filter__input {
-  border: 1px solid #dddddd;
-  box-sizing: border-box;
-  height: 30px;
-  min-width: 80%;
-  vertical-align: baseline;
-}
-
-.filter__button {
-  min-width: 20%;
-}
+@import url('./blocks/button/_brewery/button_brewery.css');
+@import url('./blocks/button/_paginator/button_paginator.css');
+@import url('./blocks/button/_search/button_search.css');

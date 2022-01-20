@@ -12,21 +12,24 @@ function Search({ onSearchSubmit }) {
   }
 
   return (
-    <div className="filter">
+    <div className="search">
       <form
-        className="filter__form"
+        className="search__form"
         onSubmit={handleSubmit(onSearchButtonClick)}
       >
         <input
-          className="filter__input"
+          className="search__input"
+          placeholder="Enter your search query"
           {...register('query', {
-            required: 'Please enter your search query',
+            onChange: (e) => {
+              onSearchSubmit(e.target.value);
+            },
           })}
         />
         <button
           type="submit"
-          aria-label="sent request for filter"
-          className="interactive-button button filter__button"
+          aria-label="sent request for search"
+          className="button button_search"
         >
           Search Brewery
         </button>

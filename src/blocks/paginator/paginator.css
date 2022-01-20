@@ -1,0 +1,6 @@
+.paginator {
+  width: calc(100% - 400px*2);
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-evenly;
+}

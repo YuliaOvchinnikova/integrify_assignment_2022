@@ -17,7 +17,7 @@ function Card(props) {
       <button
         type="button"
         aria-label="Open more information"
-        className="interactive-button button card__button"
+        className="button button_card"
         onClick={onClick}
       >
         View Details

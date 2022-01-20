@@ -1,0 +1,8 @@
+.search__input {
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  height: 30px;
+  min-width: 80%;
+  vertical-align: baseline;
+  font-size: 13px;
+}

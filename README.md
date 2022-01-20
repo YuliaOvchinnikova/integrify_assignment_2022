@@ -14,7 +14,7 @@ In this project I used the following react features:
 
 For styles I use vanilla CSS and BEM ([Block, Element, Modifier](https://en.bem.info/methodology/)) methodology of organizing CSS stylesheets.
 
-Ideally I would also love to add unit tests using [Jest framework](https://jestjs.io/), but I had a very limited time resources, so this is something for the follow-up work.
+Ideally I would also love to add unit tests using [Jest framework](https://jestjs.io/), and I would implement filtering by different categories like city, type, etc, but I had a very limited time resources, so this is something for the follow-up work.
 
 This website is available on Netlify as well: [link](https://breweries-integrify-2022.netlify.app)
 

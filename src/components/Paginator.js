@@ -11,25 +11,27 @@ function Paginator({ currentPage, onPageChange }) {
   }
 
   return (
-    <>
+    <section className="paginator">
       <button
         type="button"
         aria-label="Previous page"
-        className="interactive-button button card__button"
+        className={`button button_paginator ${
+          currentPage === 1 && 'button_inactive'
+        }`}
         onClick={onPreviousButtonClick}
       >
         Previous
       </button>
-      <p>{currentPage}</p>
+      <p className="paginator__number">{currentPage}</p>
       <button
         type="button"
         aria-label="Next page"
-        className="interactive-button button card__button"
+        className="button button_paginator"
         onClick={onNextButtonClick}
       >
         Next
       </button>
-    </>
+    </section>
   );
 }
 export default Paginator;
